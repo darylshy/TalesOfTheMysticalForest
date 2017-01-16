@@ -1,4 +1,4 @@
-.msg {
+.msg, .modal-content {
   text-align: center;
   font-family: 'Cinzel', serif;
   background-color: transparent; }
@@ -26,7 +26,8 @@
     height: 100%;
     width: 100%;
     background-color: transparent;
-    border: 0; }
+    border: none;
+    outline: none; }
 
 .story-fnOver {
   box-shadow: 0 0 5px rgba(247, 246, 234, 0.1) !important;
@@ -109,5 +110,35 @@ footer {
   line-height: 100%;
   color: slategray;
   padding: 10px 10px 10px 10px; }
+
+.modal-content {
+  background: rgba(0, 0, 0, 0.9) url("/assets/images/skullhand.png") no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
+  background-position-x: center;
+  background-position-y: center;
+  height: 500px;
+  color: whitesmoke; }
+
+.modal-body {
+  text-align: center; }
+
+.modal-footer {
+  text-align: center;
+  color: black; }
+
+.close {
+  color: whitesmoke;
+  opacity: 1; }
+
+.close:hover {
+  opacity: .5; }
+
+.close-modal {
+  margin: 20px; }
+
+.close-modal:hover {
+  color: whitesmoke;
+  opacity: .9; }
 
 /*# sourceMappingURL=main.css.map */
