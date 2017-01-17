@@ -42,6 +42,13 @@
   top: 25%;
   left: 25%;
 }
+@mixin clearfix() {
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
 .story-fnOver{
   box-shadow: 0 0 5px rgba(247, 246, 234, .1) !important;
   background-color: lighten(black,5%) !important;
@@ -94,36 +101,140 @@ footer{
   background-color: lighten(black,5%);
   line-height: 100%;
   color: slategray;
-  padding: 10px 10px 10px 10px;
+  padding: 10px;
 }
-.modal-content{
-  background: rgba(0,0,0,0.9) url("/assets/images/skullhand.png") no-repeat;
-  -webkit-background-size:contain;
-  background-size:contain;
-  background-position-x: center;
-  background-position-y: center;
-  height: 500px;
-  color: whitesmoke;
-}
-.modal-body{
-  text-align: center;
-}
-.modal-footer{
-  text-align: center;
-  color:black;
-}
-.close {
-  color: whitesmoke;
-  opacity: 1;
-}
-.close:hover{
-  opacity: .5;
-}
-.close-modal{
-  margin:20px;
-}
-.close-modal:hover{
-  color:whitesmoke;
-  opacity: .9;
+.modal{
+  .modal-content{
+    background: rgba(0,0,0,0.9) url("/assets/images/skullhand.png") no-repeat;
+    -webkit-background-size:contain;
+    background-size:contain;
+    background-position-x: center;
+    background-position-y: center;
+    height: 500px;
+    color: whitesmoke;
+
+    .modal-body{
+      text-align: center;
+    }
+    .modal-footer{
+      text-align: center;
+      color:black;
+    }
+  }
+  .close {
+    color: whitesmoke;
+    opacity: 1;
+  }
+  .close:hover{
+    opacity: .5;
+  }
+  .close-modal{
+    margin:20px;
+  }
+  .close-modal:hover{
+    color:whitesmoke;
+    opacity: .9;
+  }
 }
 
+
+/*Media Queries=============================================================================
+- Phones ~ Portrait( 320px - 414px) =====================================================*/
+/* Portrait */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 414px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: portrait) {
+  .header-top{
+    background-size: contain;
+    height:auto;
+    .msg.h1{
+      font-size:130%;
+    }
+  }
+  .subtext{
+    top:50%;
+    left:12.5%;
+    width: 75%;
+    font-size:100%;
+    height: 25%;
+  }
+  .story{
+    height:200px;
+    .story-title{
+      font-size:100%;
+      padding: 20% 20%;
+    }
+    .story1-img,
+    .story2-img,
+    .story3-img,
+    .story1-img:hover,
+    .story2-img:hover,
+    .story3-img:hover{
+      height:75%;
+      width:75%;
+      top:12.5%;
+      left:12.5%;
+    }
+  }
+  .modal-title.h1, .modal-body{
+    font-size:2rem;
+  }
+}
+//Fixes story proportions
+@media only screen and
+(min-device-width: 367px) and
+(max-device-width: 414px) and
+(-webkit-min-device-pixel-ratio: 2) and
+(orientation: portrait){
+  .story1-img,
+  .story2-img,
+  .story3-img,
+  .story1-img:hover,
+  .story2-img:hover,
+  .story3-img:hover{
+    height:90% !important;
+  }
+  .story-title{
+    padding: 25% 25% !important;
+  }
+}
+/*Media Queries=============================================================================
+- Phones ~ Landscape( 568px - 736px) =====================================================*/
+/* Portrait */
+@media only screen
+and (min-device-width: 568px)
+and (max-device-width: 736px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) {
+  .header-top{
+    background-size: contain;
+    height:auto;
+    .msg.h1{
+      font-size:200%;
+    }
+  }
+  .subtext{
+    top:50%;
+    left:12.5%;
+    width: 75%;
+    font-size:100%;
+    height: 25%;
+  }
+  .modal-title.h1, .modal-body{
+    font-size:1rem;
+  }
+  .modal-content{
+    width:50%;
+    left:25%;
+    height:60% !important;
+  }
+  .modal-footer{
+    padding:0;
+  }
+  .modal-body{
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
