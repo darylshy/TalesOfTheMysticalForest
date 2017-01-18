@@ -240,5 +240,8 @@ footer {
 
   .subtext, div.msg {
     margin-top: -25px; } }
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait) {
+  .story {
+    width: 100% !important; } }
 
 /*# sourceMappingURL=main.css.map */
