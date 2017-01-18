@@ -30,8 +30,8 @@ html, body {
     .header-top .subtext .subtext-btn:hover:after {
       content: 'Alive'; }
     .header-top .subtext .subtext-btn {
-      height: 100%;
-      width: 100%;
+      height: inherit;
+      width: inherit;
       background-color: transparent;
       border: none;
       outline: none; }
@@ -101,9 +101,7 @@ html, body {
     margin: auto; }
 
 .divider {
-  padding: 11px 0;
-  background-color: black;
-  height: 10%; }
+  height: 20%; }
 
 footer {
   background-color: #0d0d0d;
@@ -113,7 +111,7 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 11.95%; }
+  height: 20%; }
 
 .modal .modal-content {
   background: rgba(0, 0, 0, 0.9) url("/assets/images/skullhand.png") no-repeat;
@@ -158,7 +156,19 @@ footer {
       width: 75%; }
 
   .modal-title.h1, .modal-body {
-    font-size: 2rem; } }
+    font-size: 2rem; }
+
+  .header-top {
+    height: 150px; }
+
+  .subtext {
+    height: 50px !important; }
+
+  .headline > .msg {
+    padding: 0 35px !important; }
+
+  .subtext, div.msg {
+    margin-top: -25px; } }
 /*Media Queries=============================================================================
 - Phones ~ Landscape( 568px - 736px) =====================================================*/
 /* Portrait */
@@ -176,7 +186,19 @@ footer {
 
   .modal-body {
     padding-top: 0;
-    padding-bottom: 0; } }
+    padding-bottom: 0; }
+
+  .header-top {
+    height: 150px; }
+
+  .subtext {
+    height: 50px !important; }
+
+  .headline > .msg {
+    padding: 0 35px !important; }
+
+  .subtext, div.msg {
+    margin-top: -25px; } }
 /*Media Queries=============================================================================
 - Tablet ~ Landscape( 736px - 768px) =====================================================*/
 /* Portrait */
@@ -193,12 +215,30 @@ footer {
       width: 75%; }
     .story .story-title {
       padding: 35% 25% !important;
-      font-size: 150%; } }
-@media only screen and (min-device-width: 1078px) {
-  .header-top.msg.h1 {
-    font-size: 3.5rem !important; } }
-@media only screen and (max-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+      font-size: 150%; }
+
+  .header-top {
+    height: 150px; }
+
+  .subtext {
+    height: 50px !important; }
+
   .headline > .msg {
-    padding: 0 35px !important; } }
+    padding: 0 35px !important; }
+
+  .subtext, div.msg {
+    margin-top: -25px; } }
+@media only screen and (max-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .header-top {
+    height: 150px; }
+
+  .subtext {
+    height: 50px !important; }
+
+  .headline > .msg {
+    padding: 0 35px !important; }
+
+  .subtext, div.msg {
+    margin-top: -25px; } }
 
 /*# sourceMappingURL=main.css.map */
