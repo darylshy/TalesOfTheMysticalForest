@@ -12,7 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "jquery": "^3.1.1"
+    "jquery": "^3.1.1",
+    "jquery-textfill": "^0.6.0"
   },
   "devDependencies": {
     "lite-server": "^2.2.2",

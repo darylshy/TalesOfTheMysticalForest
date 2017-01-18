@@ -13,10 +13,10 @@
 <body>
     <div class="container-fluid">
         <div class="header-top row">
-            <div class="col-md-8 col-md-offset-2 jumbotron jbt-override headline">
-                    <div class="msg h1">Tales of the Mystical Forest</div>
+            <div class="jbt-override headline">
+                    <div class="msg">Tales of the Mystical Forest</div>
             </div>
-            <div class="col-md-8 col-md-offset-2 jumbotron jbt-override msg subtext h3">
+            <div class="msg subtext">
                 <input class="subtext-btn"
                        data-toggle="modal"
                        data-target="#story-instructions"
@@ -51,18 +51,18 @@
             </div>
         </div>
         <div class="row row2">
-            <div class="col-md-4 story col-sm-4 story1">
+            <div class=" col-sm-12 col-md-4 story story1 dead-center">
                 <div class="story1-img">
                     <h1 class="story-title">The Hidden House</h1>
                 </div>
 
             </div>
-            <div class="col-md-4 story col-sm-4 story2">
+            <div class=" col-sm-12 col-md-4 story story2 dead-center">
                 <div class="story2-img">
                     <h1 class="story-title">The Lighted Path</h1>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-4 story story3">
+            <div class=" col-sm-12 col-md-4 story story3 dead-center">
                 <div class="story3-img">
                     <h1 class="story-title">The Magic Lady</h1>
                 </div>
@@ -70,13 +70,15 @@
         </div>
     </div>
     <div class="divider">
-        <footer>
-            A Daryl Shy Production
+        <footer class="text-muted">
+            &nbsp;
         </footer>
     </div>
 
 <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/jquery-textfill/source/jquery.textfill.min.js"></script>
 <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="FitText.js-master/jquery.fittext.js"></script>
 <script src="src/js/scripts.js"></script>
 </body>
 </html>

@@ -11,3 +11,6 @@ function btnOut() {
     $story.removeClass("story-fnOver");
 }
 $subtextBtn.hover(btnOver,btnOut);
+
+$(".headline").fitText(2, { minFontSize: '22px', maxFontSize: '84px' });
+$(".subtext").fitText(4, { minFontSize: '12px', maxFontSize: '36px' });
