@@ -12,5 +12,9 @@ function btnOut() {
 }
 $subtextBtn.hover(btnOver,btnOut);
 
-$(".headline").fitText(2, { minFontSize: '22px', maxFontSize: '84px' });
+$(".headline").fitText(2, { minFontSize: '18px', maxFontSize: '84px' });
 $(".subtext").fitText(4, { minFontSize: '12px', maxFontSize: '36px' });
+$(".story .title").fitText(2, {minFontSize:'12px', maxFontSize:'36px'});
+
+
+
