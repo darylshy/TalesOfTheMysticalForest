@@ -57,7 +57,10 @@ function stopStoryImgBubble(e) {
     e.preventDefault();
     e.stopImmediatePropagation();
 }
-$storyImg.on('touchstart',stopStoryImgBubble);
+$storyImg.on('touchstart',function(e){
+    stopStoryImgBubble(e);
+    alert("I still work");
+});
 $storyImg.on('touchend',stopStoryImgBubble);
 $story.hover(handleStoryEventStart,handleStoryEventEnd);
 $story.on("touchstart", function(e){

@@ -224,15 +224,15 @@ footer{
   }
   .arrow.arrow1{
     display: none;
-    left: 0;
+    left: calc(16.66666665% - 16px );
   }
   .arrow.arrow2{
     display: none;
-    left: 33.3333333%;
+    left: calc(50% - 17px);
   }
   .arrow.arrow3{
     display: none;
-    left: 66.6666666%;
+    left: calc(83.3333333% - 18px);
   }
   .summary{
     display: none;
@@ -274,9 +274,7 @@ and (orientation: portrait){
           height: 100%;
         }
       }
-
     }
-
     .row.row2{
       height: 75%;
       .story{
@@ -284,6 +282,9 @@ and (orientation: portrait){
         width: 100%;
       }
     }
+  }
+  .arrow1,.arrow2,.arrow3{
+    left: calc(50% - 17px) !important;
   }
 }
 
@@ -315,6 +316,9 @@ and (orientation: landscape){
       margin-top: 10px;
       margin-bottom:10px;
     }
+  }
+  footer .summary{
+    font-size: 10px;
   }
 }
 
