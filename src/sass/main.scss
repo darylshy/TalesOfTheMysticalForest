@@ -44,6 +44,17 @@ footer{
   margin: auto;
 
 }
+
+@mixin down-arrow{
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid lighten(black,5%);;
+  z-index: 100;
+
+}
+
 @mixin clearfix() {
   &::after {
     display: block;
@@ -55,6 +66,10 @@ footer{
 .story-fnOver{
   box-shadow: 0 0 5px rgba(247, 246, 234, .1) !important;
   background-color: lighten(black,5%) !important;
+}
+
+.black-top{
+  border-top: 1px solid black;
 }
 
 //-----------------------------------------------------
@@ -113,23 +128,37 @@ footer{
     background: black url("/assets/images/creepyhousebw.jpg") no-repeat;
     @include story-img-props;
   }
-  .story1-img:hover{
-    background: black url("/assets/images/creepyhouse.jpg") no-repeat;
-    @include story-img-props;
-  }
   .story2-img{
     background: black url("/assets/images/lost-man-bw.jpg") no-repeat;
-    @include story-img-props;
-  }
-  .story2-img:hover{
-    background: black url("/assets/images/lost-man.jpg") no-repeat;
     @include story-img-props;
   }
   .story3-img{
     background: black url("/assets/images/magic-lady-bw.jpg") 0 -1px no-repeat;
     @include story-img-props;
   }
+
+  .story1-img:hover{
+    background: black url("/assets/images/creepyhouse.jpg") no-repeat;
+    @include story-img-props;
+  }
+  .story2-img:hover{
+    background: black url("/assets/images/lost-man.jpg") no-repeat;
+    @include story-img-props;
+  }
   .story3-img:hover{
+    background: black url("/assets/images/magic-lady.jpg") 0 -1px no-repeat;
+    @include story-img-props;
+  }
+
+  .story1-img-hover{
+    background: black url("/assets/images/creepyhouse.jpg") no-repeat;
+    @include story-img-props;
+  }
+  .story2-img-hover{
+    background: black url("/assets/images/lost-man.jpg") no-repeat;
+    @include story-img-props;
+  }
+  .story3-img-hover{
     background: black url("/assets/images/magic-lady.jpg") 0 -1px no-repeat;
     @include story-img-props;
   }
@@ -175,7 +204,38 @@ footer{
   background-color: lighten(black,5%);
   line-height: 100%;
   color: slategray;
-  width:100%
+  width:100%;
+  overflow: hidden;
+  position: relative;
+  .arrow{
+    position: absolute;
+    top:0;
+    @include down-arrow;
+  }
+  .arrow.arrow1{
+    display: none;
+    left: 0;
+  }
+  .arrow.arrow2{
+    display: none;
+    left: 33.3333333%;
+  }
+  .arrow.arrow3{
+    display: none;
+    left: 66.6666666%;
+  }
+  .summary{
+    display: none;
+    padding:20px;
+    position: absolute;
+    top:0;
+    background-color:darken(#181819,7%);
+    line-height: inherit;
+    color: inherit;
+    height: 100%;
+    width: inherit;
+    z-index: 0;
+  }
 }
 
 //Media Queries------------------------------------------

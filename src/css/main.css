@@ -29,6 +29,9 @@ footer {
   box-shadow: 0 0 5px rgba(247, 246, 234, 0.1) !important;
   background-color: #0d0d0d !important; }
 
+.black-top {
+  border-top: 1px solid black; }
+
 .msg, .modal-content {
   text-align: center;
   font-family: 'Cinzel', serif;
@@ -76,22 +79,8 @@ footer {
     height: 50%;
     width: 50%;
     margin: auto; }
-  .story .story1-img:hover {
-    background: black url("/assets/images/creepyhouse.jpg") no-repeat;
-    cursor: pointer;
-    background-size: 100% 100%;
-    height: 50%;
-    width: 50%;
-    margin: auto; }
   .story .story2-img {
     background: black url("/assets/images/lost-man-bw.jpg") no-repeat;
-    cursor: pointer;
-    background-size: 100% 100%;
-    height: 50%;
-    width: 50%;
-    margin: auto; }
-  .story .story2-img:hover {
-    background: black url("/assets/images/lost-man.jpg") no-repeat;
     cursor: pointer;
     background-size: 100% 100%;
     height: 50%;
@@ -104,7 +93,42 @@ footer {
     height: 50%;
     width: 50%;
     margin: auto; }
+  .story .story1-img:hover {
+    background: black url("/assets/images/creepyhouse.jpg") no-repeat;
+    cursor: pointer;
+    background-size: 100% 100%;
+    height: 50%;
+    width: 50%;
+    margin: auto; }
+  .story .story2-img:hover {
+    background: black url("/assets/images/lost-man.jpg") no-repeat;
+    cursor: pointer;
+    background-size: 100% 100%;
+    height: 50%;
+    width: 50%;
+    margin: auto; }
   .story .story3-img:hover {
+    background: black url("/assets/images/magic-lady.jpg") 0 -1px no-repeat;
+    cursor: pointer;
+    background-size: 100% 100%;
+    height: 50%;
+    width: 50%;
+    margin: auto; }
+  .story .story1-img-hover {
+    background: black url("/assets/images/creepyhouse.jpg") no-repeat;
+    cursor: pointer;
+    background-size: 100% 100%;
+    height: 50%;
+    width: 50%;
+    margin: auto; }
+  .story .story2-img-hover {
+    background: black url("/assets/images/lost-man.jpg") no-repeat;
+    cursor: pointer;
+    background-size: 100% 100%;
+    height: 50%;
+    width: 50%;
+    margin: auto; }
+  .story .story3-img-hover {
     background: black url("/assets/images/magic-lady.jpg") 0 -1px no-repeat;
     cursor: pointer;
     background-size: 100% 100%;
@@ -139,7 +163,38 @@ footer {
   background-color: #0d0d0d;
   line-height: 100%;
   color: slategray;
-  width: 100%; }
+  width: 100%;
+  overflow: hidden;
+  position: relative; }
+  footer .arrow {
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #0d0d0d;
+    z-index: 100; }
+  footer .arrow.arrow1 {
+    display: none;
+    left: 0; }
+  footer .arrow.arrow2 {
+    display: none;
+    left: 33.3333333%; }
+  footer .arrow.arrow3 {
+    display: none;
+    left: 66.6666666%; }
+  footer .summary {
+    display: none;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    background-color: #070707;
+    line-height: inherit;
+    color: inherit;
+    height: 100%;
+    width: inherit;
+    z-index: 0; }
 
 @media only screen and (max-width: 768px) {
   .story {
