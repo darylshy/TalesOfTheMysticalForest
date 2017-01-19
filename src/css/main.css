@@ -29,6 +29,10 @@ footer {
   box-shadow: 0 0 5px rgba(247, 246, 234, 0.1) !important;
   background-color: #0d0d0d !important; }
 
+.story-fnOver {
+  box-shadow: 0 0 5px rgba(247, 246, 234, 0.1) !important;
+  background-color: #0d0d0d !important; }
+
 .msg, .modal-content {
   text-align: center;
   font-family: 'Cinzel', serif;

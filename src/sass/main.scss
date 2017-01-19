@@ -1,4 +1,4 @@
-//Vertical Layout-------------
+//Vertical Layout-------------------------------------
 html,body{
   height: 100%;
 }
@@ -29,7 +29,8 @@ html,body{
 footer{
   height: 20%;
 }
-//Helpers:--------------------
+
+//Helpers----------------------------------------------
 .dead-center {
   display: flex;
   flex-direction: column;
@@ -57,14 +58,21 @@ footer{
   }
 }
 
-//---------------------------------
+
+.story-fnOver{
+  box-shadow: 0 0 5px rgba(247, 246, 234, .1) !important;
+  background-color: lighten(black,5%) !important;
+}
+
+//-----------------------------------------------------
 .msg, .modal-content{
   text-align: center;
   font-family: 'Cinzel', serif;
   background-color:transparent;
 }
 
-//Header---------------------------
+
+//Header-----------------------------------------------
 .header-top{
   color:whitesmoke;
   background: url("/assets/images/dforest.jpg")  center;
@@ -96,7 +104,8 @@ footer{
   }
 }
 
-//Stories---------------------------
+
+//Stories-----------------------------------------------
 .story{
   background-color:darken(#181819,7%);
   border: 1px solid darken(grey,48.05%);
@@ -135,7 +144,8 @@ footer{
   }
 }
 
-//Modal---------------------------
+
+//Modal-----------------------------------------------
 .modal{
   .modal-content{
     background: rgba(0,0,0,0.9) url("/assets/images/skullhand.png") no-repeat;
@@ -169,7 +179,8 @@ footer{
   }
 }
 
-//Footer---------------------------
+
+//Summary-----------------------------------------------
 footer{
   background-color: lighten(black,5%);
   line-height: 100%;
@@ -177,7 +188,8 @@ footer{
   width:100%
 }
 
-//Media Queries---------------------
+
+//Media Queries------------------------------------------
 @media only screen
 and (max-width: 768px){
   .story{
