@@ -1,3 +1,4 @@
+//layout variables----------------------------------------------------
 var $container = $(".container-fluid");
 var $story = $container.find(".story");
 var $subtext = $container.find(".subtext");
@@ -7,7 +8,7 @@ var $headline = $container.find(".headline");
 var $storyTitle = $container.find(".story .title");
 var $modalHeader = $container.find(".modal-content .modal-header .modal-title.h1");
 var $modalBody = $container.find(".modal-content .modal-body");
-//----------------------------------------------------
+//layout Animations----------------------------------------------------
 function btnOver() {
     $subtextBtn.prop('value', subtextBtnText + " Alive");
     $story.addClass("story-fnOver");
