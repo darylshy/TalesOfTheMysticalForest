@@ -9,9 +9,6 @@ html,body{
     height: 40%;
     .headline{
       height: 60%;
-      .msg{
-        //height: 100%;
-      }
     }
     .subtext{
       height: 40%;
@@ -39,8 +36,6 @@ footer{
   justify-content: center;
 }
 
-
-
 .msg, .modal-content{
   text-align: center;
   font-family: 'Cinzel', serif;
@@ -62,7 +57,7 @@ footer{
   }
   .subtext{
     background-color: rgba(0, 0, 0, .2);
-    //margin-top: -50px;
+    width:100%;
     color: inherit;
     &:hover{
       background-color: rgba(0, 0, 0, .5);
@@ -221,9 +216,28 @@ and (orientation: landscape){
     width: 33.3333333%;
     float: left;
   }
+  .modal-content{
+    width: 50%;
+    left:25%;
+  }
 }
 
-
+//for iphone5 modal adjustments
+@media only screen
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape){
+  .modal-content div.modal-body.h3{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    hr{
+      margin-top: 10px;
+      margin-bottom:10px;
+    }
+  }
+}
 
 
 
