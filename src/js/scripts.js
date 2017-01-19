@@ -1,4 +1,5 @@
-var $container = $(".container-fluid");
+var $body = $("body");
+var $container = $body.find(".container-fluid");
 var $story = $container.find(".story");
 var $subtext = $container.find(".subtext");
 var $subtextBtn = $container.find(".subtext-btn");
@@ -7,7 +8,8 @@ var $headline = $container.find(".headline");
 var $storyTitle = $container.find(".story .title");
 var $modalHeader = $container.find(".modal-content .modal-header .modal-title.h1");
 var $modalBody = $container.find(".modal-content .modal-body");
-//----------------------------------------------------
+var $footer = $body.find("footer.text-muted");
+//Animations----------------------------------------------------
 function btnOver() {
     $subtextBtn.prop('value', subtextBtnText + " Alive");
     $story.addClass("story-fnOver");

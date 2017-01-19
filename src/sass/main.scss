@@ -1,4 +1,4 @@
-//Vertical Layout-------------
+//Vertical Layout-------------------------------------
 html,body{
   height: 100%;
 }
@@ -29,50 +29,11 @@ html,body{
 footer{
   height: 20%;
 }
-//Helpers: Centering--------------
+//Helpers----------------------------------------------
 .dead-center {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.msg, .modal-content{
-  text-align: center;
-  font-family: 'Cinzel', serif;
-  background-color:transparent;
-}
-.jbt-override{
-  color:whitesmoke;
-  background-color:transparent;
-}
-.header-top{
-  color:whitesmoke;
-  background: url("/assets/images/dforest.jpg")  center;
-  background-size:cover;
-  overflow: auto;
-  .headline{
-    color: inherit;
-    padding-top: 30px;
-    padding-bottom:30px;
-  }
-  .subtext{
-    background-color: rgba(0, 0, 0, .2);
-    width:100%;
-    color: inherit;
-    &:hover{
-      background-color: rgba(0, 0, 0, .5);
-    }
-    .subtext-btn:hover:after{
-      content: 'Alive';
-    }
-    .subtext-btn{
-      height:inherit;
-      width:inherit;
-      background-color: rgba(0, 0, 0, 0);
-      border:none;
-      outline: none;
-    }
-  }
 }
 
 @mixin story-img-props{
@@ -95,6 +56,47 @@ footer{
   box-shadow: 0 0 5px rgba(247, 246, 234, .1) !important;
   background-color: lighten(black,5%) !important;
 }
+
+//-----------------------------------------------------
+.msg, .modal-content{
+  text-align: center;
+  font-family: 'Cinzel', serif;
+  background-color:transparent;
+}
+
+//Header-----------------------------------------------
+.header-top{
+  color:whitesmoke;
+  background: url("/assets/images/dforest.jpg")  center;
+  background-size:cover;
+  overflow: auto;
+  .headline{
+    color: inherit;
+    padding-top: 30px;
+    padding-bottom:30px;
+    background-color:transparent;
+  }
+  .subtext{
+    background-color: rgba(0, 0, 0, .2);
+    width:100%;
+    color: inherit;
+    &:hover{
+      background-color: rgba(0, 0, 0, .5);
+    }
+    .subtext-btn:hover:after{
+      content: 'Alive';
+    }
+    .subtext-btn{
+      height:inherit;
+      width:inherit;
+      background-color: rgba(0, 0, 0, 0);
+      border:none;
+      outline: none;
+    }
+  }
+}
+
+//Stories-----------------------------------------------
 .story{
   background-color:darken(#181819,7%);
   border: 1px solid darken(grey,48.05%);
@@ -132,12 +134,9 @@ footer{
     @include story-img-props;
   }
 }
-footer{
-  background-color: lighten(black,5%);
-  line-height: 100%;
-  color: slategray;
-  width:100%
-}
+
+
+//Modal-----------------------------------------------
 .modal{
   .modal-content{
     background: rgba(0,0,0,0.9) url("/assets/images/skullhand.png") no-repeat;
@@ -171,6 +170,15 @@ footer{
   }
 }
 
+//Summary-----------------------------------------------
+footer{
+  background-color: lighten(black,5%);
+  line-height: 100%;
+  color: slategray;
+  width:100%
+}
+
+//Media Queries------------------------------------------
 @media only screen
 and (max-width: 768px){
   .story{
