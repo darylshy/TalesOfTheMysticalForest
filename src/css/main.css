@@ -220,6 +220,32 @@ footer {
 
   .arrow1, .arrow2, .arrow3 {
     left: calc(50% - 17px) !important; } }
+.iPad-header-fix {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  position: relative; }
+  .iPad-header-fix .subtext {
+    position: absolute;
+    bottom: 0; }
+
+.iPad-Pro-header-fix {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  position: relative; }
+  .iPad-Pro-header-fix .subtext {
+    position: absolute;
+    bottom: 0; }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 1023px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .header-top {
+    position: relative; }
+
+  div.msg {
+    margin-top: -10px; }
+
+  .subtext {
+    position: absolute;
+    bottom: 0; } }
 @media only screen and (max-device-width: 768px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
   .story {
     width: 33.3333333%;
@@ -227,7 +253,14 @@ footer {
 
   .modal-content {
     width: 50%;
-    left: 25%; } }
+    left: 25%; }
+
+  .header-top {
+    position: relative; }
+
+  .subtext {
+    position: absolute;
+    bottom: 0; } }
 @media only screen and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
   .modal-content div.modal-body.h3 {
     margin-top: 0;

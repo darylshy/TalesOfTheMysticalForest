@@ -287,6 +287,42 @@ and (orientation: portrait){
     left: calc(50% - 17px) !important;
   }
 }
+.iPad-header-fix{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  position: relative;
+  .subtext{
+    position: absolute;
+    bottom:0;
+  }
+}
+.iPad-Pro-header-fix{
+  padding-top: 40px;
+  padding-bottom: 20px;
+  position: relative;
+  .subtext{
+    position: absolute;
+    bottom:0;
+  }
+}
+
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 1023px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape){
+  .header-top{
+    position: relative;
+  }
+  div.msg{
+    margin-top: -10px;
+  }
+  .subtext{
+    position: absolute;
+    bottom:0;
+  }
+}
+
 
 @media only screen
 and (max-device-width: 768px)
@@ -300,9 +336,16 @@ and (orientation: landscape){
     width: 50%;
     left:25%;
   }
+  .header-top{
+    position: relative;
+  }
+  .subtext{
+    position: absolute;
+    bottom:0;
+  }
 }
 
-//for iphone5 modal adjustments
+//iPhone5 adjustments
 @media only screen
 and (max-device-width: 568px)
 and (-webkit-min-device-pixel-ratio: 2)

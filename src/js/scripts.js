@@ -5,7 +5,8 @@ let $storyImg = $story.find('.story-img');
 let $subtext = $container.find(".subtext");
 let $subtextBtn = $container.find(".subtext-btn");
 let subtextBtnText = $subtextBtn.prop('value');
-let $headline = $container.find(".headline");
+let $headerTop = $body.find('.header-top');
+let $headline = $headerTop.find(".headline");
 let $storyTitle = $container.find(".story .title");
 let $modalHeader = $container.find(".modal-content .modal-header .modal-title.h1");
 let $modalBody = $container.find(".modal-content .modal-body");
@@ -59,7 +60,7 @@ function stopStoryImgBubble(e) {
 }
 $storyImg.on('touchstart',function(e){
     stopStoryImgBubble(e);
-    alert("I still work");
+    alert("START GAME");
 });
 $storyImg.on('touchend',stopStoryImgBubble);
 $story.hover(handleStoryEventStart,handleStoryEventEnd);
@@ -74,7 +75,64 @@ $story.on("touchend", function(e){
     let storyImgClass = $(storyImg).prop('class');
     storyImg.removeClass(`${storyImgClass.match(/story\d-img-hover/)[0]}`);
 });
+//----------------------------------------------------------------------
+
+let isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    iPad: function () {
+        return navigator.userAgent.match(/iPad/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};
 
 
+//Fix for iPad and iPad Pro Header
+//On initial load
+if (isMobile.iPad() && $(window).width() < 1366){
+    $headerTop.addClass('iPad-header-fix');
+}
+if (isMobile.iPad() && $(window).width() === 1366) {
+    $headerTop.addClass('iPad-Pro-header-fix');
+}
+//On resize - for orientation change and testing
+$(window).resize(function () {
+    if($headerTop.hasClass('iPad-header-fix')
+    || $headerTop.hasClass('iPad-Pro-header-fix'))
+    {
+        let headerClass = $headerTop.prop('class').match(/iPad(?:-Pro)?-header-fix/g)[0];
+        console.log(headerClass);
+        $headerTop.removeClass(headerClass);
+    }
 
+    if (isMobile.iPad() && $(window).width() === 1024){
+        if($headerTop.hasClass('iPad-Pro-header-fix')){
+            $headerTop.removeClass('iPad-Pro-header-fix')
+        }
+
+        $headerTop.addClass('iPad-header-fix');
+    }
+    if (isMobile.iPad() && $(window).width() === 1366){
+        if($headerTop.hasClass('iPad-header-fix')){
+            $headerTop.removeClass('iPad-header-fix');
+        }
+
+        $headerTop.addClass('iPad-Pro-header-fix');
+    }
+});
 
