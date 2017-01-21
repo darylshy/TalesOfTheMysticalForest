@@ -1,6 +1,7 @@
 let $body = $("body");
 let $container = $body.find(".container-fluid");
-let $story = $container.find(".story");
+let $stories = $container.find(".stories");
+let $story = $stories.find(".story");
 let $storyImg = $story.find('.story-img');
 let $subtext = $container.find(".subtext");
 let $subtextBtn = $container.find(".subtext-btn");
@@ -135,4 +136,43 @@ $(window).resize(function () {
         $headerTop.addClass('iPad-Pro-header-fix');
     }
 });
+
+//Animations
+$storyImg.on('click', function (e) {
+    // save for later
+    // let box = boxClass.match(/box\d/)[0];
+    // let boxNum = $(`.${box}`);
+
+    let target = e.target;
+    // Code for rotating the whole div
+    let grandParent = target.parentElement.parentElement;
+    let greatGrandParent = grandParent.parentElement;
+    let boxClass,boxChildren;
+    if(target.className === "story-title"){
+        boxClass = grandParent.className;
+        boxChildren = $(greatGrandParent).children();
+    }else{
+        boxClass = target.parentElement.className;
+        boxChildren = $(grandParent).children();
+    }
+    setDirection(boxClass,boxChildren);
+});
+
+let rotateChildren = (boxes, addDirection, removeDirection)=>{
+    for(let box of boxes){
+        $(box).removeClass(removeDirection);
+        $(box).addClass(addDirection);
+    }
+};
+
+let setDirection = (boxClass, children)=>{
+    let forward = 'rotate-box-forward';
+    let backward = 'rotate-box-backward';
+    if(boxClass.search(/rotate-box-forward|rotate-box-backward/) === -1)
+        rotateChildren(children,forward);
+    else if(boxClass.search(/rotate-box-forward/) === -1)
+        rotateChildren(children,forward,backward);
+    else
+        rotateChildren(children,backward,forward);
+};
 
