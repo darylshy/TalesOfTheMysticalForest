@@ -136,3 +136,4 @@ $(window).resize(function () {
     }
 });
 
+//Code for rotating story-img as an alternative to rotating story div
