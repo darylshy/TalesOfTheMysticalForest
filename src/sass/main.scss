@@ -69,7 +69,6 @@ footer{
   }
 }
 
-
 .story-fnOver{
   box-shadow: 0 0 5px rgba(247, 246, 234, .1) !important;
   background-color: lighten(black,5%) !important;
@@ -79,6 +78,31 @@ footer{
   border-top: 1px solid black;
 }
 
+/*Animations----------------------------------*/
+.stories{
+  perspective: 5000px;
+  transition: .5s;
+}
+@keyframes rotate-forward {
+  from {transform: rotateY(0deg);}
+  to {transform: rotateY(180deg);}
+}
+@keyframes rotate-backward {
+  from {transform: rotateY(180deg);}
+  to {transform: rotateY(0deg);}
+}
+.rotate-box-forward{
+  animation-name: rotate-forward;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+.rotate-box-backward{
+  animation-name: rotate-backward;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
 //-----------------------------------------------------
 .msg, .modal-content{
   text-align: center;

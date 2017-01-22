@@ -1,6 +1,7 @@
 let $body = $("body");
 let $container = $body.find(".container-fluid");
-let $story = $container.find(".story");
+let $stories = $body.find(".stories")
+let $story = $stories.find(".story");
 let $storyImg = $story.find('.story-img');
 let $subtext = $container.find(".subtext");
 let $subtextBtn = $container.find(".subtext-btn");
@@ -137,3 +138,48 @@ $(window).resize(function () {
 });
 
 //Code for rotating story-img as an alternative to rotating story div
+//Animations
+$storyImg.on('click', function (e) {
+
+    let child = e.target;
+    let parent = child.parentElement;
+    let grandParent = child.parentElement.parentElement;
+    let grandChildren = $(grandParent).children().children();
+    let parents = $(grandParent.parentElement).children().children();
+    let boxClass,boxChildren;
+
+    if(child.className === "story-title"){
+        boxClass = parent.className;
+        boxChildren = parents;
+        
+    }else{
+        boxClass = child.className;
+        boxChildren = grandChildren;
+        // setTimeout(function () {
+        //     $(boxChildren).css("background","url(../../../assets/images/skullhand.png)");
+        // },350);
+    }
+
+    setDirection(boxClass,boxChildren);
+});
+
+let rotateChildren = (boxes, addDirection, removeDirection)=>{
+    for(let box of boxes){
+        $(box).removeClass(removeDirection);
+        $(box).addClass(addDirection);
+    }
+};
+
+let setDirection = (boxClass, children)=>{
+    let forward = 'rotate-box-forward';
+    let backward = 'rotate-box-backward';
+    if(boxClass.search(/rotate-box-forward|rotate-box-backward/) === -1)
+        rotateChildren(children,forward);
+    else if(boxClass.search(/rotate-box-forward/) === -1)
+        rotateChildren(children,forward,backward);
+    else
+        rotateChildren(children,backward,forward);
+};
+
+
+
