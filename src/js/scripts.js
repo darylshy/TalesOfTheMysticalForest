@@ -1,3 +1,4 @@
+//refactoring code before I go any further
 let $body = $("body");
 let $container = $body.find(".container-fluid");
 let $stories = $body.find(".stories")
