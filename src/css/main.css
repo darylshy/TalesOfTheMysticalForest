@@ -247,8 +247,8 @@ footer {
   .arrow1, .arrow2, .arrow3 {
     left: calc(50% - 17px) !important; } }
 .iPad-header-fix {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 20px;
+  padding-bottom: 40px;
   position: relative; }
   .iPad-header-fix .subtext {
     position: absolute;

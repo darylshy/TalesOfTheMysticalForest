@@ -20,7 +20,7 @@ class Mobile{
                 return navigator.userAgent.match(/IEMobile/i);
             },
             any: function() {
-                return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+                return (this.Android() || this.BlackBerry() || this.iOS() || this.Opera() || this.Windows());
             }
         }
     }
