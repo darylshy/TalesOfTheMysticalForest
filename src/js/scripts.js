@@ -35,8 +35,8 @@ dom.$story.on("touchend", function(e){
 });
 
 /*Prevents Footer Summary event from firing when $storyImg is touched on Mobile Phones.
-$storyImg will be used to start the game on mobile
-=======================================================================================*/
+ $storyImg will be used to start the game on mobile
+ =======================================================================================*/
 function stopStoryImgBubble(e) {
     e.preventDefault();
     e.stopImmediatePropagation();
