@@ -81,7 +81,7 @@ footer{
 /*Animations----------------------------------*/
 .stories{
   perspective: 5000px;
-  transition: .5s;
+  //transition: .5s;
 }
 @keyframes rotate-forward {
   from {transform: rotateY(0deg);}
