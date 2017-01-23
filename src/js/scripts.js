@@ -1,4 +1,3 @@
-
 //instance of cached DOM
 let dom = new DOM();
 
