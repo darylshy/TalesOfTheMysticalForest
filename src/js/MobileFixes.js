@@ -61,7 +61,7 @@ class MobileFixes{
 
                 dom.$headerTop.addClass('iPad-Pro-header-fix');
             }
-            
+
             //iPad Footer Fix On Orientation Change
             if(mobile.iPad()){
                 dom.$summary.css({'font-size': '2.5rem','line-height': '2.5rem'});

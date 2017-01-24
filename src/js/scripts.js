@@ -35,8 +35,8 @@ dom.$story.on("touchend", function(e){
 });
 
 /*Prevents Footer Summary event from firing when $storyImg is touched on Mobile Phones.
- $storyImg will be used to start the game on mobile
- =======================================================================================*/
+ $storyImg will be used to start the game on mobile*/
+
 function stopStoryImgBubble(e) {
     e.preventDefault();
     e.stopImmediatePropagation();
@@ -56,11 +56,7 @@ MobileFixes.stickyHeader();
 //Fix for iPad and iPad Pro Header
 //================================
 //On initial load
-<<<<<<< HEAD
 MobileFixes.iPadHeaderAndFooterInit();
-=======
-MobileFixes.iPadHeaderInit();
->>>>>>> cc1adb89dac96a4f5bea2c5a324a01f2143423c0
 
 //On resize - for orientation change and testing ALL MOBILE
 //=========================================================
