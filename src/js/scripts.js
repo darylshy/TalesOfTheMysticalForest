@@ -56,7 +56,11 @@ MobileFixes.stickyHeader();
 //Fix for iPad and iPad Pro Header
 //================================
 //On initial load
+<<<<<<< HEAD
 MobileFixes.iPadHeaderAndFooterInit();
+=======
+MobileFixes.iPadHeaderInit();
+>>>>>>> cc1adb89dac96a4f5bea2c5a324a01f2143423c0
 
 //On resize - for orientation change and testing ALL MOBILE
 //=========================================================
