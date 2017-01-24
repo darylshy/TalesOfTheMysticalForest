@@ -167,7 +167,7 @@ footer {
     margin: auto; }
 
 .modal .modal-content {
-  background: rgba(0, 0, 0, 0.9) url("/assets/images/skullhand.png") no-repeat;
+  background: rgba(0, 0, 0, 0.9) url(https://s27.postimg.org/3qfm65ms3/skullhand.png) no-repeat;
   -webkit-background-size: contain;
   background-size: contain;
   background-position-x: center;
